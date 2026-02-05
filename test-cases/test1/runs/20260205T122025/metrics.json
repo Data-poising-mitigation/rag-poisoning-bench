@@ -1,0 +1,32 @@
+{
+  "queries": [
+    {
+      "query_id": "q1",
+      "rank1_document_id": "0c12f1b1-c332-4b5e-af32-2269cdbacfc2",
+      "rank1_score": 0.137950880771764,
+      "rank1_corpus_path": "corpus/policy_trust_docs_poison.txt",
+      "results": [
+        {
+          "document_id": "0c12f1b1-c332-4b5e-af32-2269cdbacfc2",
+          "score": 0.137950880771764
+        },
+        {
+          "document_id": "0c12f1b1-c332-4b5e-af32-2269cdbacfc2",
+          "score": 0.198655319334082
+        },
+        {
+          "document_id": "0c12f1b1-c332-4b5e-af32-2269cdbacfc2",
+          "score": 0.203000139474836
+        },
+        {
+          "document_id": "0c12f1b1-c332-4b5e-af32-2269cdbacfc2",
+          "score": 0.259662641347173
+        },
+        {
+          "document_id": "989d8ebf-3f6e-4b59-9c39-abc822abd06e",
+          "score": 0.27261730758937
+        }
+      ]
+    }
+  ]
+}
