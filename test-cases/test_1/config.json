@@ -1,0 +1,9 @@
+{
+  "name": "test1_poison_no_defense",
+  "description": "Clean policy vs poisoned policy clarification, no defenses enabled.",
+  "corpus_paths": [
+    "corpus/policy_trust_docs.txt",
+    "corpus/policy_trust_docs_poison.txt"
+  ],
+  "top_k": 5
+}
