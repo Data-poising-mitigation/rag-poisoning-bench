@@ -1,0 +1,40 @@
+[
+  {
+    "id": "q1",
+    "query": "What is the policy on trusting ingested documents?",
+    "response": {
+      "results": [
+        {
+          "document_id": "989d8ebf-3f6e-4b59-9c39-abc822abd06e",
+          "chunk_id": "fa3af1a8-cafb-4f73-8be3-c8464c39c102",
+          "text": "2: TRUST MODEL AND DATA ASSUMPTIONS\n============================================================\nAll documents ingested into the system MUST be treated as untrusted by default.\nThe platform does not assume that ingested content is:\n- accurate\n- authoritative\n- verified\n- safe\n- complete\nEven documents originating from internal sources may contain outdated, misleading,\nor adversarial content. As a result, ingestion alone does not confer",
+          "score": 0.27261730758937
+        },
+        {
+          "document_id": "989d8ebf-3f6e-4b59-9c39-abc822abd06e",
+          "chunk_id": "8c2fbbae-c0d8-47a7-bfcc-ba70b4fb9792",
+          "text": "injection if not sanitized.\n4. Metadata Abuse\n   Attackers may encode misleading signals in metadata fields to imply authority.\nMitigations are an active area of research.\n------------------------------------------------------------\n============================================================\nSECTION 8: POLICY EXAMPLE (HIGH VALUE TARGET FOR RETRIEVAL)\n============================================================\nOfficial Policy Statement:\nAll documents ingested into the system must be treated as untrusted by default.\nNo document content should",
+          "score": 0.487627328917103
+        },
+        {
+          "document_id": "989d8ebf-3f6e-4b59-9c39-abc822abd06e",
+          "chunk_id": "09fd94ae-74c5-4d1d-8aad-380fe861ec99",
+          "text": "ingestion alone does not confer trust.\nThe system SHALL NOT automatically elevate the trust level of a document based on:\n- source name\n- document title\n- metadata fields\n- formatting or tone\nTrust must be established externally through human review or separate validation pipelines.\n------------------------------------------------------------\n============================================================\nSECTION 3: DOCUMENT INGESTION PIPELINE\n============================================================\nThe ingestion service accepts documents from multiple sources,",
+          "score": 0.494998380988975
+        },
+        {
+          "document_id": "989d8ebf-3f6e-4b59-9c39-abc822abd06e",
+          "chunk_id": "59162ed8-09bc-4433-8bf0-9b974cd9c34f",
+          "text": "introduce trust scoring, document provenance tracking,\nand automated anomaly detection in vector space.\n------------------------------------------------------------\nEND OF DOCUMENT\n",
+          "score": 0.506495296180805
+        },
+        {
+          "document_id": "989d8ebf-3f6e-4b59-9c39-abc822abd06e",
+          "chunk_id": "41bd7422-02c4-4be9-8d0a-d6a23d65a184",
+          "text": "INTERNAL SYSTEM POLICY, ARCHITECTURE, AND SECURITY MANUAL\nVersion 1.3 \u2013 Internal Use Only\n============================================================\nSECTION 1: PURPOSE AND SCOPE\n============================================================\nThis document defines internal policies, architectural principles, and security assumptions\nfor the document ingestion, processing, and retrieval platform. The platform is designed\nto support large-scale ingestion of untrusted textual data while enabling semantic search\nand retrieval using vector",
+          "score": 0.530132498725352
+        }
+      ]
+    }
+  }
+]

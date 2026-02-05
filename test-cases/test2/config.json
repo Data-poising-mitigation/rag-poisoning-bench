@@ -1,0 +1,1 @@
+{"name":"test2_baseline_no_poison","description":"Same query as test1; only clean policy doc in scope (no poison).","corpus_paths":["corpus/policy_trust_docs.txt"],"top_k":5}
