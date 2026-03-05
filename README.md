@@ -17,9 +17,9 @@ test1/
     <timestamp>/           # Generated. One folder per run; holds results.json, metrics.json, summary.md.
 ```
 
-| Item                       | Authored / Generated | Purpose                                                  |
-| -------------------------- | -------------------- | -------------------------------------------------------- |
-| **config.json**            | Authored             | Which corpus files and any test options.                 |
-| **queries/queries.json**   | Authored             | The queries (id + text) for this test.                   |
-| **state/corpus_used.json** | Generated            | Upload state and corpus_path → document_id. Do not edit. |
-| **runs/<timestamp>/**      | Generated            | One run's outputs: results, metrics, summary.            |
+| Item                       | Authored / Generated | Purpose                                                                                              |
+| -------------------------- | -------------------- | ---------------------------------------------------------------------------------------------------- |
+| **config.json**            | Authored             | Which corpus files and any test options (e.g. `top_k`, optional `query_options` for /query payload). |
+| **queries/queries.json**   | Authored             | The queries (id + text) for this test.                                                               |
+| **state/corpus_used.json** | Generated            | Upload state and corpus_path → document_id. Do not edit.                                             |
+| **runs/<timestamp>/**      | Generated            | One run's outputs: results, metrics, summary.                                                        |

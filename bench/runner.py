@@ -106,6 +106,7 @@ def query(test_names: list[str], repo_root: Path, client: RAGClient) -> None:
         config = load_config(test_path)
         queries_list = load_queries(test_path)
         top_k = config.get("top_k", 5)
+        query_options = config.get("query_options", {}) or {}
         timestamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S")
         run_dir = test_path / "runs" / timestamp
         run_dir.mkdir(parents=True, exist_ok=True)
@@ -115,7 +116,12 @@ def query(test_names: list[str], repo_root: Path, client: RAGClient) -> None:
             qid = q.get("id", "")
             qtext = q["text"]
             print(f"[runner] Query id={qid} ...")
-            response_results = client.query_documents(qtext, document_ids=document_ids, top_k=top_k)
+            response_results = client.query_documents(
+                qtext,
+                document_ids=document_ids,
+                top_k=top_k,
+                **query_options,
+            )
             results.append({"id": qid, "query": qtext, "response": {"results": response_results}})
             print(f"[runner] Query {qid} returned {len(response_results)} results")
         (run_dir / "results.json").write_text(json.dumps(results, indent=2), encoding="utf-8")

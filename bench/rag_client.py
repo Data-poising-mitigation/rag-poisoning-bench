@@ -65,6 +65,7 @@ class RAGClient:
         query: str,
         document_ids: list[str] | None,
         top_k: int = 5,
+        **extra: object,
     ) -> list[dict]:
         """
         POST /query with query text and optional document_ids; return results list.
@@ -80,6 +81,14 @@ class RAGClient:
         payload: dict = {"query": query, "top_k": top_k}
         if document_ids is not None:
             payload["document_ids"] = document_ids
+        if extra:
+            # Allow tests to pass additional query options (e.g. retrieval_mode)
+            # straight through to the pipeline's /query endpoint.
+            for key, value in extra.items():
+                # Avoid overwriting core keys unless explicitly intended.
+                if key in payload and key not in ("retrieval_mode", "primary_embedder_name", "secondary_embedder_name"):
+                    continue
+                payload[key] = value
         url = f"{self._base}/query"
         print(f"[rag_client] POST {url} ...")
         with httpx.Client(timeout=QUERY_TIMEOUT) as client:
