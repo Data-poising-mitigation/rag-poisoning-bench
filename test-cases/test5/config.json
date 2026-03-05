@@ -1,0 +1,9 @@
+{
+  "name": "test5_nq_stealth_poison_only",
+  "description": "Stealthy_Attacks NQ: clean + poisoned passages (Poison attack style), no prompt-injection instructions.",
+  "corpus_paths": [
+    "corpus/nq_stealth_clean.txt",
+    "corpus/nq_stealth_poison.txt"
+  ],
+  "top_k": 5
+}

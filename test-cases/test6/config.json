@@ -1,0 +1,9 @@
+{
+  "name": "test6_nq_stealth_pia_vs_benign",
+  "description": "Stealthy_Attacks NQ: benign vs PIA-style poisoned passages (prompt injection in retrieved docs).",
+  "corpus_paths": [
+    "corpus/nq_stealth_benign.txt",
+    "corpus/nq_stealth_pia.txt"
+  ],
+  "top_k": 5
+}

@@ -1,0 +1,9 @@
+{
+  "name": "test3_nq_poisonedrag_poison_no_defense",
+  "description": "Natural Questions (PoisonedRAG) with clean + poisoned NQ corpus, no defenses enabled.",
+  "corpus_paths": [
+    "corpus/nq_clean.txt",
+    "corpus/nq_poisonedrag_poison.txt"
+  ],
+  "top_k": 5
+}
